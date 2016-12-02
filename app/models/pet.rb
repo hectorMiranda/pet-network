@@ -1,6 +1,7 @@
 class Pet < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
+  belongs_to :user
   scope :most_recent, -> { order(id: :desc) }
 
 

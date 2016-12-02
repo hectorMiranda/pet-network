@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'profile/pets#index'
   
-  namespace :user do
+  namespace :users do
     resources :pets
   end
 

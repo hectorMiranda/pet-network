@@ -6,15 +6,11 @@
           <%= link_to 'All Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
         </li>
         <li class="list-group-item">
-          <%= link_to 'My pets', user_pets_path, class: "nav-link #{yield(:user)}" %>
-        </li>
-        <li class="list-group-item">
           <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
         </li>
-        <% if true %>
-          <li class="list-group-item">
-          </li>
-          <li class="list-group-item">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
@@ -35,15 +31,14 @@
         <%= link_to 'All Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
       </li>
       <li class="nav-item">
-          <%= link_to 'My pets', user_pets_path, class: "nav-link #{yield(:user)}" %>
+          <%= link_to 'My pets', users_pets_path, class: "nav-link #{yield(:user)}" %>
       </li>
       <li class="nav-item">
         <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
       </li>
-      <% if true%>
+      <% if user_signed_in?%>
         <li class="nav-item">
-        </li>
-        <li class="nav-item">
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       <% end %>
     </ul>

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'friendly_id', '~> 5.1.0' 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
