@@ -1,0 +1,16 @@
+<% provide(:page_title, 'All pets') %>
+<% provide(:user, 'active') %>
+
+<div class="row">
+  <div>
+    <%= link_to 'New pet', new_user_pet_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+  <br>
+  <table class="table table-striped">
+    <tr>
+      <th colspan="5">Name</th>
+    </tr>
+    <%= render @pets %>
+  </table>
+</div>
+

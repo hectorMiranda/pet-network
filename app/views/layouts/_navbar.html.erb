@@ -3,7 +3,10 @@
     <div class='card'>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <%= link_to 'Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
+          <%= link_to 'All Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'My pets', user_pets_path, class: "nav-link #{yield(:user)}" %>
         </li>
         <li class="list-group-item">
           <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
@@ -29,7 +32,10 @@
     </button>
     <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
       <li class="nav-item">
-        <%= link_to 'Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
+        <%= link_to 'All Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
+      </li>
+      <li class="nav-item">
+          <%= link_to 'My pets', user_pets_path, class: "nav-link #{yield(:user)}" %>
       </li>
       <li class="nav-item">
         <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
