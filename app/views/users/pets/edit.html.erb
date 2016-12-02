@@ -1,8 +1,4 @@
 <% provide(:page_title, "Edit #{@pet.name}") %>
 <% provide(:user, 'active') %>
-
-
-<h1>Editing Pet</h1>
-
 <%= render 'form', pet: @pet, url: users_pet_url(@pet) %>
 
