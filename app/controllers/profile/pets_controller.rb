@@ -2,7 +2,8 @@ module Profile
   class PetsController < ProfileController
 
     def index
-      @pets = Pet.most_recent
+      @pets = Pet.most_recent.paginate(:page => params[:page], per_page: 3)
+
     end
 
     def show

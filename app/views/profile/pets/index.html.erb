@@ -2,10 +2,11 @@
 <% provide(:pet_active, 'active') %>
 <p id="notice"><%= notice %></p>
 
-<h1>Pets</h1>
-
 <div class="row">
   <%= render @pets %>
+</div>
+<div class="pagination">
+  <%= will_paginate @pets %>
 </div>
 
 
