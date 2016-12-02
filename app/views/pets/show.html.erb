@@ -1,8 +1,10 @@
 <% provide(:page_title, @pet.name) %>
+<% provide(:pet_active, 'active') %>
 
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+    <h1><%= @pet.name %></h1>
+  <p>
   <strong>Name:</strong>
   <%= @pet.name %>
 </p>
@@ -22,10 +24,8 @@
   <%= @pet.age %>
 </p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @pet.slug %>
-</p>
 
+ </div>
+</div>
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>

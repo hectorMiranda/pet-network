@@ -1,0 +1,45 @@
+<div class="collapse" id="exCollapsingNavbar">
+  <div class="collapse-bg p-a-1">
+    <div class='card'>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <%= link_to 'Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+        </li>
+        <% if true %>
+          <li class="list-group-item">
+          </li>
+          <li class="list-group-item">
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-light bg-faded">
+  <div class='container'>
+    <a class='navbar-brand' href='/'>
+      The Pet Network
+    </a>
+    <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+      &#9776;
+    </button>
+    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+      <li class="nav-item">
+        <%= link_to 'Pets', root_path, class: "nav-link #{yield(:pet_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+      </li>
+      <% if true%>
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
