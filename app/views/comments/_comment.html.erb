@@ -1,0 +1,8 @@
+<div>
+<% @comments.each do |comment| %>
+  <p><%= comment.content %> </p>
+<% end %>
+</div>
+<div>
+<%= render 'comments/form' %>
+</div>

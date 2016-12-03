@@ -8,6 +8,8 @@ module Profile
 
     def show
       @pet = Pet.friendly.find(params[:id])
+      @comments = Comment.where(pet_id:  @pet)
+
     end
   end
 end

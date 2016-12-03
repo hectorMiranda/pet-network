@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: 'profile/pets#index'
   
   namespace :users do
-    resources :pets
+    resources :pets do
+      resources :comments
+    end
   end
-
 
   scope module: 'profile' do
     get 'about' => 'pages#about', as: :about
@@ -13,5 +14,8 @@ Rails.application.routes.draw do
     get 'pets/:id' => 'pets#show', as: :pet
   end
 
+  resources :pets do
+    resources :comments
+  end
 
 end
