@@ -1,24 +1,18 @@
-# README
+# The Pet Network App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was created as a code challenge given by Ayzenberg, this is a pet management app in Rails. 
 
-Things you may want to cover:
+The app allows pet owners to add their pets and allow others to view them and comment on their profiles.
 
-* Ruby version
+This app uses:
 
-* System dependencies
+* Bootstrap for styling
+* Devise for user creationg and authentication
+* will_paginate to support pets pagination
+* Heroku: http://pet-network.herokuapp.com/
+* Github as repo provider: https://github.com/hectorMiranda/pet-network
 
-* Configuration
+The app still needs some work on the styles, comments and search and proper testing. I may be updating this repo soon to add improvements but at the moment I ran out of time.
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
