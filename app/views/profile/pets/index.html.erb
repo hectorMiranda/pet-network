@@ -1,7 +1,15 @@
 <% provide(:page_title, 'All pets') %>
 <% provide(:pet_active, 'active') %>
 <p id="notice"><%= notice %></p>
+<div class="row">
+<%= form_tag pets_path, :method => 'get' do %>
+  Breeds<%=select_tag(:breed, options_for_select(Pet.distinct.pluck(:breed).map { |obj| [obj, obj] }), :include_blank => true) %>
+  Sex<%=select_tag(:sex, options_for_select(Pet.distinct.pluck(:sex).map { |obj| [obj, obj] }), :include_blank => true) %>
+  Age<%=select_tag(:age, options_for_select(Pet.distinct.pluck(:age).map { |obj| [obj, obj] }), :include_blank => true) %>
+   <%= submit_tag "Filter" %>
+<% end %>
 
+</div>
 <div class="row">
   <%= render @pets %>
 </div>
