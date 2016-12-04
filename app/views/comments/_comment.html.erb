@@ -1,8 +1,9 @@
-<div>
-<% @comments.each do |comment| %>
-  <p><%= comment.content %> </p>
-<% end %>
+  <% @comments.each do |comment| %>
+    <div class="card comment">
+      <%= comment.user.email %> said: <br/>  
+      <%= comment.content %> 
+    </div>
+    <% end %>
 </div>
-<div>
 <%= render 'comments/form' %>
 </div>

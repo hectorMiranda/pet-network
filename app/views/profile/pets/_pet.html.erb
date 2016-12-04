@@ -4,7 +4,7 @@
     <div class="card-topper" style='background-image: url(<%= pet.image_url %>);'></div>
     <div class="card-block">
       <h4 class="card-title"><%= link_to pet.name, pet %></h4>
-      <p class="owner">Created by: <%= pet.owner %></p>
+      <p class="owner">Age: <%= pet.age %></p>
       <p class="breed">Breed: <%= pet.breed %></p>
       <p class="breed">Sex: <%= pet.sex %> </p>
       <%= link_to 'See pet', pet, class: 'btn btn-read' %>

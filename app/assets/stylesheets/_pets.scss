@@ -52,14 +52,33 @@
   }
 }
 
-.pets.edit, .pets.new {
+.pets.edit, .pets.new, .pets.show {
   .card {
     .card-block {
       background-color: $light-gray;
     }
+    .card-topper {
+      height: 500px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
     .card-title {
       margin-bottom: 0;
-      font-size: 18px;
+      font-size: 28px;
+    }
+    .card-row {
+      padding: 5px;
+      border-left: 0;
+      border-right: 0;
+    }
+    .comment {
+      border-right-color:#ddd;
+      border-width:1px;
+      font-size: 10px;
+      margin-top:1px;
+
+
     }
     .list-group-item {
       padding: 10px;
